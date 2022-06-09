@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contentio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <style>
+      :root {
+        --content-primary-color: #<%= @content.primary %>;
+        --content-secondary-color: #<%= @content.secondary %>;
+        --content-accent-color: #<%= @content.accent %>;
+        --content-text-color: #<%= @content.text_color %>;
+        --content-text-size: <%= @content.text_size%>px;
+      }
+    </style>
+    <%= stylesheet_link_tag "content", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

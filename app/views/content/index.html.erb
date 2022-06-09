@@ -1,0 +1,13 @@
+<div id="content-container">
+	<div class="content-side"></div>
+	<div class="content-center">
+		<div class="glowing-container">
+			<% 15.times do |i| %>
+				<% style="--particle-index:#{i}; --delay:#{@content.rand.rand(1000)}ms;" %>
+				<span class="particle" style="<%= style %>"></span>
+			<% end %>
+			<h1 id="content">CONTENT</h1>
+		</div>
+	</div>
+	<div class="content-side"></div>
+</div>
