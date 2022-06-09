@@ -1,6 +1,8 @@
 class Content
 	TEXT_COLOR_LIGHT_THRESHOLD = 186
 
+	ALL_THE_FONTS = Dir['public/fonts/*.ttf'].map { |f| f.gsub('public/', '') }
+
 	attr_reader :rand
 
 	def initialize(seed = nil)
@@ -32,6 +34,11 @@ class Content
 
 	def text_size
 		120 + @rand.rand(60)
+	end
+
+	def font_path
+		idx = @rand.rand(ALL_THE_FONTS.size)
+		ALL_THE_FONTS[idx]
 	end
 
 	private
