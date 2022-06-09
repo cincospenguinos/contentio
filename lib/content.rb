@@ -1,7 +1,7 @@
 class Content
 	TEXT_COLOR_LIGHT_THRESHOLD = 186
 
-	ALL_THE_FONTS = Dir['public/fonts/*.ttf'].map { |f| f.gsub('public/', '') }
+	ALL_THE_FONTS = Dir['public/fonts/**'].map { |f| f.gsub('public/', '') }
 
 	attr_reader :rand
 
